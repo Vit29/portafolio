@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Nunito&family=Poiret+One&family=Poppins:wght@600&family=Rubik&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222220;
+
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: grid;
+    place-content: center; */
+
+}
+.container-all {
+    width: 80%;
+    height:75%;
+    background: linear-gradient( orange 45%, yellow );
+
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.toggle {
+    display: none;
+}
+
+.nav {
+    grid-column: 1 / 2;
+    grid-row: 1/ 8 ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-all .nav a {
+    color: #fff;
+    font-size: .8em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease all;
+}
+
+.container-all .nav a:hover {
+    font-size: 1em;
+}
+
+.pagination {
+    grid-column: 2 / 11;
+    grid-row: 1/ 6 ;
+
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+#home, #about, #skills, #projects, #contac {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* 
+.container-all .nav a:nth-child(1) {
+    background: rgb(115, 115, 211)
+}
+.container-all .nav a:nth-child(2) {
+    background:transparent;
+}
+.container-all .nav a:nth-child(3) {
+    background: rgb(219, 139, 139);
+}
+.container-all .nav a:nth-child(4) {
+    background: rgb(115, 204, 185);
+}
+.container-all .nav a:nth-child(5) {
+    background: rgb(240, 95, 70);
+}
+
+
+#home {
+    background: rgb(115, 115, 211)
+}
+
+#skills {
+    background: rgb(219, 139, 139);
+   
+}
+
+#projects {
+    background: rgb(115, 204, 185);
+    
+}
+
+#contac {
+    background: rgb(240, 95, 70);
+   
+} */
+
+/***************** OPTION TWO ****************/
+
+.container-all .nav a:nth-child(1) {
+    background: rgb(115, 115, 211)
+}
+.container-all .nav a:nth-child(2) {
+    background: rgb(83, 83, 219);
+}
+.container-all .nav a:nth-child(3) {
+    background: rgb(216, 102, 216);
+}
+.container-all .nav a:nth-child(4) {
+    background:  rgb(245, 185, 74);
+}
+.container-all .nav a:nth-child(5) {
+    background: rgb(240, 95, 70);
+}
+#home {
+    /* background: rgb(115, 115, 211) */
+    background: linear-gradient( rgb(115, 115, 211)20%, rgb(83, 83, 219) );
+}
+#about {
+    background: linear-gradient(  rgb(83, 83, 219)37%,rgb(69, 132, 173));
+}
+
+#skills {
+    /* background: rgb(219, 139, 139); */
+    background: linear-gradient( 182deg ,rgb(69, 132, 173),rgb(216, 102, 216) 45%);
+}
+
+#projects {
+    /* background: rgb(115, 204, 185); */
+    background: linear-gradient(  rgb(216, 102, 216) , rgb(245, 185, 74) 60%);
+}
+
+#contac {
+    /* background: rgb(240, 95, 70); */
+    background: linear-gradient(  rgb(245, 185, 74), rgb(240, 95, 70) 40%) ;
+}
+
+
+@media (max-width: 800px) {
+
+    .container-all {
+        width: 100vh;
+        height:100vh;
+        background: linear-gradient( orange, yellow);
+        display: initial;
+    }
+
+    .pagination {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+
+    .nav {
+        position: fixed;
+        transform: translate(-200px);
+        transition: all ease 1s;
+
+        width: 150px;
+        height: 100vh;
+    }
+
+    .toggle {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        position: fixed;
+        right: 20px;
+        top: 10px;
+        background: #fff;
+        border-radius: 50%;
+    }
+
+    .toggle i {
+        font-size: 30px;
+    }
+
+    .active {
+        transform: translateX(0px);
+    }
+
+    #about {
+        background:  orange;
+    }
+
+    .container-all .nav a:nth-child(2) {
+        background: orange;
+    }
+
+}
+
+

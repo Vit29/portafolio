@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Montserrat:wght@900&family=Nunito&family=Poiret+One&family=Poppins:wght@600&family=Rubik&family=Ubuntu&display=swap');
+
+
+.about__description, .about__foto {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.about__description {
+    width: 60%;    
+    color:#fff;
+    font-family: 'poppins', sans-serif;
+}
+
+
+.about__description h1{
+    font-size: 2rem;
+}
+.about__description p{
+    font-size: .9rem;
+    padding: 0 60px 0 0;
+}
+
+.about__foto {
+    width: 40%;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    #about {
+        flex-direction: column;
+    }
+    
+    .about__description {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .about__description h1{
+        font-size: 2rem;
+        padding-left:40px ;
+    }
+
+    .about__description p{
+        font-size: .8rem;
+        padding: 0 40px;
+    }
+
+    .about__foto {
+        width: 100%;
+        height: 60%;
+    }
+
+
+}

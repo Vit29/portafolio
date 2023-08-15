@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home/home.css">
+    <link rel="stylesheet" href="about/aboutme.css">
+    <link rel="stylesheet" href="skills/skills.css">
+    <link rel="stylesheet" href="contac/contac.css">
+    <title>Portafolio</title>
+</head>
+<body>
+
+    <section >
+        <div class="container-all">
+            <div id="toggle" class="toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="nav">
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#skills">skills</a>
+                <a href="#projects">projects</a>
+                <a href="#contac">contac</a>
+            </div>
+            <div class="pagination">
+                
+                <div id="home"> 
+                    <div class="home__description">
+                        <p>vitaly</p>
+                        <p>frontend</p>
+                        <p>developer</p>
+                    </div>
+                    <div class="home__foto">
+                        <img src="" alt="foto">
+                    </div>
+                </div>
+                <div id="about" >   
+                    <div class="about__foto">
+                        <img src="" alt="foto">
+                    </div>
+                    <div class="about__description">
+                        <h1>About me</h1>
+                        <p>
+                            Soy una persona comunicativa, trabajadora, amable y capaz de adaptarse a cada situación. 
+                            <br>
+                            Busco una oportunidad
+                            laboral en la que demostrar mi compromiso y capacidad de trabajo. Joven, con pasión por la
+                            profesión, facilidad para el trabajo en equipo.
+                        </p>
+                    </div>
+                </div>
+                <div id="skills" >   
+                    <div class="skills__container">
+                        <img src="logosSkills/htmlLogo.png" alt="">
+                        <img src="logosSkills/logo-css.png" alt="">
+                        <img src="logosSkills/logo-JS.png" alt="">
+                        <img src="logosSkills/logo-mysql.png" alt="">
+                        <img src="logosSkills/java-logo-1.png" alt="">
+                    </div>
+                </div>
+                <div id="projects" >   
+                    projects
+                </div>
+                <div id="contac" >   
+                    <img src="contac/img/buzon.png" alt="">
+                    <form class="form__container" action="submeter-formulario.php" method="post">
+                        <div class="nombre__email">
+                            <p >
+                                <label for="nombre" class="colocar_nombre">
+                                    <span class="obligatorio"></span>
+                                </label>
+                                <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+                                    placeholder="Escribe tu nombre">
+                            </p >
+        
+                            <p>
+                                <label for="email" class="colocar_email">
+                                    <span class="obligatorio"></span>
+                                </label>
+                                <input type="email" name="introducir_email" id="email" required="obligatorio"
+                                    placeholder="Escribe tu Email">
+                            </p>
+                        </div>
+        
+                        <div class="telefono__asunto">
+                            <p>
+                                <label for="telefone" class="colocar_telefono">
+                                </label>
+                                <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                            </p>
+                            <p>
+                                <label for="asunto" class="colocar_asunto">
+                                    <span class="obligatorio"></span>
+                                </label>
+                                <input type="text" name="introducir_asunto" id="assunto" required="obligatorio"
+                                    placeholder="Escribe un asunto">
+                            </p>
+                        </div>
+                        
+                            <p class="asunto">
+                                <label for="mensaje" class="colocar_mensaje">
+                                    <span class="obligatorio"></span>
+                                </label>
+                                <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio"
+                                    placeholder="Deja aquí tu comentario..."></textarea>
+                            </p>
+                    
+                            <p class="boton__enviar">
+                                <button type="submit" name="enviar_formulario" id="enviar">Enviar
+                                    <!-- <p>Enviar</p> -->
+                                </button>
+                            </p>
+                            <p class="campos__oblicatorios">
+                                <span class="obligatorio"> *los campos son obligatorios. </span>
+                            </p>
+        
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+</body>
+<script src="main.js"></script>
+</html>
