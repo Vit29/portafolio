@@ -41,15 +41,14 @@
 }
 
 .container__projects .front h1 {
-    /* width: 100%; */
-    /* text-align: center; */
     color: gold;
     font-family: 'Poppins';
     height: auto;
-    font-size: 1.8rem;
+    font-size: clamp(25px, 3vw,1.8rem);
 }
+
 .container__projects .front p {
-    /* width: 100%; */
+    
     text-align: center;
     padding:  0 70px;
     font-family: 'Ubuntu';
@@ -61,7 +60,7 @@
 }
 
 .container__projects .back {
-    height: 101%;
+    height: 100%;
     background: rgb(21, 21, 22);
 
     display: flex;
@@ -108,5 +107,81 @@
 }
 
 @media (max-width: 700px) {
+    /* .container__projects {
+        width: 80%;
+        height: 80%;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    
+        gap: 1rem;
+    
+    }
+    .container__projects .project01{
+        background: rgb(223, 75, 75);
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    
+    }
+    .container__projects .project02{
+    
+        grid-column: 1/ 2;
+        grid-row: 2 / 3;
+        border: 3px dashed #fff;
+    }
+    .container__projects .project03{
+        
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        border: 3px dashed #fff;
+    }
+    .container__projects .project04{
+        
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        border: 3px dashed #fff;
+    } */
+
+    .container__projects {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container__projects .element-project:hover .front {
+        margin-top: -53%;
+    }
+
+    .container__projects .back {
+        height: 100%;
+        background: rgb(21, 21, 22);
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: space-evenly;
+
+        position: relative;
+    }
+    
+    .container__projects .back img {
+        width: 100%;
+        border-radius: 0
+    }
+    
+    .container__projects .back a{
+        text-decoration: none;
+        color: #fff;
+        background: red;
+        width: 100px;
+        height: 40px;
+        padding: 10px 0;
+        text-align: center;
+        border-radius: 3px;
+        font-family: 'Nunito';
+        font-weight: bold;      
+        position: absolute;  
+    }
     
 }
