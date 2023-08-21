@@ -13,7 +13,7 @@
 }
 
 .form__container input, textarea, button{
-    border-radius: 10px;
+    border-radius: 3px;
     border-style: none;
     width: 250px;
     height: 40px;

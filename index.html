@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="home/home.css">
     <link rel="stylesheet" href="about/aboutme.css">
     <link rel="stylesheet" href="skills/skills.css">
     <link rel="stylesheet" href="contac/contac.css">
+    <link rel="stylesheet" href="projects/projects.css">
     <title>Portafolio</title>
 </head>
 <body>
@@ -39,6 +40,7 @@
                         <p>vitaly</p>
                         <p>frontend</p>
                         <p>developer</p>
+                        <div class="Curriculum-buttom"><a href="home/documento/vitaly-varela-curriculum.pdf" download="CV-vitali-varela">Curriculum<i class="fa-solid fa-download"></i></a></div>
                     </div>
                     <div class="home__foto">
                         <img src="" alt="foto">
@@ -69,7 +71,27 @@
                     </div>
                 </div>
                 <div id="projects" >   
-                    projects
+                    <div class="container__projects">
+                        <div class="element-project  project01">
+                            <div class="front">
+                                <h1>Enlace consultores</h1>
+                                <p>Pagina web responsive para importante empresa mexicana de bienes raices </p>
+                            </div>
+                            <div class="back">
+                                <img src="projects/img/consultores-web.png" alt="img pagina">
+                                <a href="https://vit29.github.io/enlaceconsultores/">Visitar</a>
+                            </div>
+                        </div>
+                        <project class="element-project  project02">
+                                <p>coming soon</p>
+                        </project>
+                        <project class="element-project  project03">
+                            <p>coming soon</p>
+                        </project>
+                        <project class="element-project  project04">
+                            <p>coming soon</p>
+                        </project>
+                    </div>
                 </div>
                 <div id="contac" >   
                     <img src="contac/img/buzon.png" alt="">
@@ -116,8 +138,8 @@
                             </p>
                     
                             <p class="boton__enviar">
-                                <button type="submit" name="enviar_formulario" id="enviar">Enviar
-                                    <!-- <p>Enviar</p> -->
+                                <button type="submit" name="enviar_formulario" id="enviar">
+                                    Enviar
                                 </button>
                             </p>
                             <p class="campos__oblicatorios">

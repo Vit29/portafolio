@@ -1,0 +1,112 @@
+#projects {
+    justify-content: center;
+    align-items: center;
+
+}
+.container__projects {
+    width: 80%;
+    height: 80%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 1rem;
+
+}
+
+.element-project {
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+}
+
+.container__projects .project01{
+    background: rgb(223, 75, 75);
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+
+}
+
+.container__projects .front {
+    background: rgb(21, 21, 22);
+    height: 100%;
+    transition: 500ms;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+.container__projects .front h1 {
+    /* width: 100%; */
+    /* text-align: center; */
+    color: gold;
+    font-family: 'Poppins';
+    height: auto;
+    font-size: 1.8rem;
+}
+.container__projects .front p {
+    /* width: 100%; */
+    text-align: center;
+    padding:  0 70px;
+    font-family: 'Ubuntu';
+    height: auto;
+}
+
+.container__projects .element-project:hover .front {
+    margin-top: -71%;
+}
+
+.container__projects .back {
+    height: 101%;
+    background: rgb(21, 21, 22);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-evenly;
+}
+
+.container__projects .back img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.container__projects .back a{
+    text-decoration: none;
+    color: #fff;
+    background: red;
+    width: 100px;
+    height: 40px;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 3px;
+    font-family: 'Nunito';
+    font-weight: bold;
+}
+
+.container__projects .project02{
+    
+    grid-column: 1/ 3;
+    grid-row: 3 / 4;
+    border: 3px dashed #fff;
+}
+.container__projects .project03{
+    
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+    border: 3px dashed #fff;
+}
+.container__projects .project04{
+    
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+    border: 3px dashed #fff;
+}
+
+@media (max-width: 700px) {
+    
+}
