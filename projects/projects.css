@@ -114,7 +114,7 @@
     }
 
     .container__projects .element-project:hover .front {
-        margin-top: -80%;
+        margin-top: -100%;
     }
 
     .container__projects .front {
