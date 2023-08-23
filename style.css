@@ -17,9 +17,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* display: grid;
-    place-content: center; */
-
 }
 .container-all {
     width: 80%;
@@ -179,6 +176,7 @@ section {
 
         width: 150px;
         height: 100vh;
+        z-index: 6;
     }
 
     .toggle {
