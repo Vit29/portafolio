@@ -176,7 +176,7 @@ section {
 
         width: 150px;
         height: 100vh;
-        z-index: 6;
+        z-index: 10;
     }
 
     .toggle {
@@ -190,6 +190,7 @@ section {
         top: 10px;
         background: #fff;
         border-radius: 50%;
+        z-index: 11;
     }
 
     .toggle i {
