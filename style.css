@@ -131,8 +131,7 @@ section {
 }
 #home {
     /* background: rgb(115, 115, 211) */
-    /* background: linear-gradient( rgb(115, 115, 211)20%, rgb(83, 83, 219) ); */
-    background: rgb(29, 29, 29);
+    background: linear-gradient( rgb(115, 115, 211)20%, rgb(83, 83, 219) );
 }
 #about {
     background: linear-gradient(  rgb(83, 83, 219)37%,rgb(69, 132, 173));
@@ -156,6 +155,8 @@ section {
 
 @media (max-width: 700px) {
 
+    
+    
     .container-all {
         width: 100vh;
         height:100vh;
