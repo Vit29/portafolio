@@ -17,11 +17,13 @@
 
 .about__description h1{
     font-size: 2rem;
+    color: goldenrod;
+    font-family: 'montserrat', sans-serif;
 }
 .about__description p{
     font-size: .9rem;
     padding: 0 60px 0 0;
-    margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 .about__foto {
@@ -33,7 +35,7 @@
     #about {
         flex-direction: column;
         position: relative;
-        /* mix-blend-mode: screen; */
+        background: rgb(29,29,29);
     }
 
     .background_aboutme {
@@ -45,7 +47,7 @@
         position: absolute;
         bottom: 0;
         mix-blend-mode: soft-light;
-        filter: grayscale(100%);    
+        filter: grayscale(100%);        
         z-index: 5;
     }
     
@@ -71,6 +73,4 @@
         width: 100%;
         height: 60%;
     }
-
-
 }

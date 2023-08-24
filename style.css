@@ -131,25 +131,25 @@ section {
 }
 #home {
     /* background: rgb(115, 115, 211) */
-    background: linear-gradient( rgb(115, 115, 211)20%, rgb(83, 83, 219) );
+    /* background: linear-gradient( rgb(115, 115, 211)20%, rgb(83, 83, 219) ); */
 }
 #about {
-    background: linear-gradient(  rgb(83, 83, 219)37%,rgb(69, 132, 173));
+    /* background: linear-gradient(  rgb(83, 83, 219)37%,rgb(69, 132, 173)); */
 }
 
 #skills {
     /* background: rgb(219, 139, 139); */
-    background: linear-gradient( 182deg ,rgb(69, 132, 173),rgb(216, 102, 216) 45%);
+    /* background: linear-gradient( 182deg ,rgb(69, 132, 173),rgb(216, 102, 216) 45%); */
 }
 
 #projects {
     /* background: rgb(115, 204, 185); */
-    background: linear-gradient(  rgb(216, 102, 216) , rgb(245, 185, 74) 60%);
+    /* background: linear-gradient(  rgb(216, 102, 216) , rgb(245, 185, 74) 60%); */
 }
 
 #contac {
     /* background: rgb(240, 95, 70); */
-    background: linear-gradient(  rgb(245, 185, 74), rgb(240, 95, 70) 40%) ;
+    /* background: linear-gradient(  rgb(245, 185, 74), rgb(240, 95, 70) 40%) ; */
 }
 
 
@@ -160,7 +160,8 @@ section {
     .container-all {
         width: 100vh;
         height:100vh;
-        background: linear-gradient( orange, yellow);
+        /* background: linear-gradient( orange, yellow); */
+        background: rgb(29,29,29);
         display: initial;
     }
 
