@@ -1,11 +1,11 @@
 #contac {
     align-items: center;
     justify-content: space-evenly;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .form__container {
-    width: 80%;
+    width: 40%;
 }
 
 .form__container p {
@@ -47,21 +47,23 @@
     
 }
 #contac img {
-    width: 180px;
+    width: 300px;
 }
 
 .boton__enviar button ,.telefono__asunto{
     margin-top: 30px;
 }
 
-@media (min-width: 800px) {
+@media (max-width: 759px) {
     #contac {
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     #contac img {
-        width: 300px;
+        width: 250px;
+    }
+
+    .form__container {
+        width: 80%;
     }
 }

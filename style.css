@@ -21,7 +21,8 @@ section {
 .container-all {
     width: 80%;
     height:75%;
-    background: linear-gradient( orange 45%, yellow );
+    /* background: linear-gradient( orange 45%, yellow ); */
+    background: rgb(29,29,29);
 
     display: grid;
     grid-template-columns: repeat(10,1fr);
@@ -73,6 +74,7 @@ section {
     width: 100%;
     height: 100%;
     display: flex;
+    
 }
 
 /* 
@@ -129,31 +131,13 @@ section {
 .container-all .nav a:nth-child(5) {
     background: rgb(240, 95, 70);
 }
-#home {
-    /* background: rgb(115, 115, 211) */
-    /* background: linear-gradient( rgb(115, 115, 211)20%, rgb(83, 83, 219) ); */
-}
-#about {
-    /* background: linear-gradient(  rgb(83, 83, 219)37%,rgb(69, 132, 173)); */
-}
-
-#skills {
-    /* background: rgb(219, 139, 139); */
-    /* background: linear-gradient( 182deg ,rgb(69, 132, 173),rgb(216, 102, 216) 45%); */
-}
-
-#projects {
-    /* background: rgb(115, 204, 185); */
-    /* background: linear-gradient(  rgb(216, 102, 216) , rgb(245, 185, 74) 60%); */
-}
-
-#contac {
-    /* background: rgb(240, 95, 70); */
-    /* background: linear-gradient(  rgb(245, 185, 74), rgb(240, 95, 70) 40%) ; */
-}
 
 
-@media (max-width: 700px) {
+
+/* @media (max-width: 700px) */
+/* @media (min-width: 768px) and (max-width:1023px)  */
+
+@media (max-width:1023px) {
 
     
     
@@ -204,14 +188,16 @@ section {
         transform: translateX(0px);
     }
 
-    #about {
+    /* #about {
         background:  orange;
-    }
+    } */
 
-    .container-all .nav a:nth-child(2) {
+    /* .container-all .nav a:nth-child(2) {
         background: orange;
-    }
+    } */
 
 }
+
+
 
 

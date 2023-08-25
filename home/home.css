@@ -1,34 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Montserrat:wght@900&family=Nunito&family=Poiret+One&family=Poppins:wght@600&family=Rubik&family=Ubuntu&display=swap');
 
-.home__foto, .home__description {
+#home {
+    position: relative;
+}
+
+.home__description {
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
+    padding:  20px 30px;
 }
 
-.home__description  {
-    width: 60%;
-    padding:  0 30px;
+.background_me {
+    position: absolute;
+    right: 0;
+    top: -80px;
+    background-image: url(img/foto-home-05.png);
+    background-size: cover;
+    width: 50%;
+    height: 145%;
+    filter: grayscale(100%);
+    mix-blend-mode: screen;
 }
 
 .home__description p {
     font-family: 'montserrat', sans-serif;
     color: #fff;
-    font-size: 5rem ;
+    font-size: clamp(3.2rem, 7vw ,9rem);
     text-transform: uppercase;
     line-height:.9;
 }
-
-.home__foto {
-    width: 40%;
-    align-items: center;
-    
-}
-
-/* .home__foto img {
-    width: 100%;
-} */
 
 .Curriculum-buttom {
     background: red;
@@ -52,18 +55,28 @@
     font-weight: bold;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
 
     #home {
         flex-direction: column;
         position: relative;
         background: rgb(29, 29, 29);
+        justify-content: end;
+    }
 
-        
+    .home__description {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:  0 30px;
+        mix-blend-mode: difference;
     }
 
     .background_me {
         position: absolute;
+        top: 0;
         background-image: url(img/foto-home-05.png);
         background-size: cover;
         width: 100%;
@@ -71,27 +84,51 @@
         filter: grayscale(100%);
         mix-blend-mode: screen;
     }
+}
 
-    .home__foto, .home__description {
-        height: 50%;
-        display: flex;
-        z-index: 1;
+@media (min-width: 760px) and (max-width:1023px) {
+
+    .background_me {
+        top: -100px;
+        width: 100%;
+        height: 115%;
     }
     
-    .home__description  {
-        width: 100%;
+    .background_me {
+        width: 70%;
     }
+
     .home__description p {
-        font-size: 3rem ;
+        font-size: 6.5rem;
     }
 
-    .home__foto {
-        order: 1;
-        
+    .Curriculum-buttom {
+        background: red;
+        width: 250px;
+        text-align: center;
+        height: 60px;
+        padding: 10px;
+        margin: 15px 0;
+        border-radius: 2px;
     }
-    .home__description {
-        order: 2;
+    
+    .Curriculum-buttom i {
+        padding:  0 0 0 10px;
+        color: #fff;
     }
+    
+    .Curriculum-buttom a {
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Nunito';
+        font-weight: bold;
+        font-size: 2rem;
+    }
+}
 
+@media (max-width: 759px) {
+    .home__description p {
+        font-size: 3rem;
+    }
 }
 

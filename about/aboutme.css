@@ -1,29 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Montserrat:wght@900&family=Nunito&family=Poiret+One&family=Poppins:wght@600&family=Rubik&family=Ubuntu&display=swap');
 
-
-.about__description, .about__foto {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#about {
+    position: relative;
+    justify-content: end;
 }
 
 .about__description {
-    width: 60%;    
-    color:#fff;
-    font-family: 'poppins', sans-serif;
+    width: 65%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:  50px;
 }
 
+.background_aboutme {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    mix-blend-mode: soft-light;
+    filter: grayscale(100%);        
+    z-index: 5;
+    transform: scaleX(-1);
+    display: flex;
+    align-items: end;
+}
+
+.background_aboutme img {
+    width: 100%;
+}
 
 .about__description h1{
     font-size: 2rem;
     color: goldenrod;
     font-family: 'montserrat', sans-serif;
+    
 }
 .about__description p{
     font-size: .9rem;
-    padding: 0 60px 0 0;
+    
     margin-top: 20px;
+    color:#fff;
+    font-family: 'poppins', sans-serif;
+
 }
 
 .about__foto {
@@ -31,46 +51,72 @@
     align-items: center;
 }
 
-@media (max-width: 800px) {
+
+@media (min-width: 760px) and (max-width:1023px) {
     #about {
-        flex-direction: column;
-        position: relative;
-        background: rgb(29,29,29);
+        justify-content: start;
+    }
+    
+    .background_aboutme {
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: soft-light;
+        transform: none;
+        left: initial;
+        right: -150px;
+    }
+    
+    .background_aboutme img {
+        width: 100%;
     }
 
-    .background_aboutme {
-        background-image: url(img/foto-aboutme.png);
-        background-size: cover;
+    .about__description {
+        height: 60%;
+        width: 70%;
+        padding: 0 70px;
+        z-index: 6;
+    }
 
+    .about__description h1{
+        font-size: 3rem;
+    }
+
+    .about__description p{
+        font-size: 1.2rem;
+    } 
+}
+
+@media (max-width: 759px) {
+    
+    .background_aboutme {
         width: 100%;
-        height: 95%;
-        position: absolute;
-        bottom: 0;
+        height: 100%;
         mix-blend-mode: soft-light;
-        filter: grayscale(100%);        
-        z-index: 5;
+        transform: none;
+        bottom: initial;
+        align-items: end;
+    }
+    
+    .background_aboutme img {
+        width: 150%;
+        height: 70%;
     }
     
     .about__description {
-        height: 50%;
+        height: 55%;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        padding: 30px;
+        z-index: 6;
     }
 
     .about__description h1{
         font-size: 2.1rem;
-        padding-left:40px ;
+        
     }
 
     .about__description p{
         font-size: .9rem;
-        padding: 0 40px;
+        
     }
 
-    .about__foto {
-        width: 100%;
-        height: 60%;
-    }
 }
