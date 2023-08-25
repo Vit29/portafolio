@@ -2,15 +2,17 @@
 
 #home {
     position: relative;
+    align-items: end;
 }
 
 .home__description {
     width: 100%;
-    height: 100%;
+    height: 65%;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     padding:  20px 30px;
+    z-index: 6;
 }
 
 .background_me {
@@ -21,7 +23,6 @@
     background-size: cover;
     width: 50%;
     height: 145%;
-    filter: grayscale(100%);
     mix-blend-mode: screen;
 }
 
@@ -55,80 +56,47 @@
     font-weight: bold;
 }
 
-@media (max-width: 1024px) {
-
-    #home {
-        flex-direction: column;
-        position: relative;
-        background: rgb(29, 29, 29);
-        justify-content: end;
-    }
+@media (max-width: 759px) {
 
     .home__description {
         width: 100%;
         height: 50%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         padding:  0 30px;
-        mix-blend-mode: difference;
     }
 
     .background_me {
-        position: absolute;
-        top: 0;
-        background-image: url(img/foto-home-05.png);
-        background-size: cover;
+        top: initial;
         width: 100%;
         height: 100%;
-        filter: grayscale(100%);
-        mix-blend-mode: screen;
+    }
+
+    .home__description p {
+        font-size: clamp(2.8rem, 7vw ,9rem);
     }
 }
 
 @media (min-width: 760px) and (max-width:1023px) {
 
     .background_me {
-        top: -100px;
-        width: 100%;
-        height: 115%;
-    }
-    
-    .background_me {
+        height: 90%;
         width: 70%;
     }
 
+    .home__description {
+        height: 50%;
+    }
+    
     .home__description p {
         font-size: 6.5rem;
     }
 
     .Curriculum-buttom {
-        background: red;
         width: 250px;
-        text-align: center;
         height: 60px;
-        padding: 10px;
-        margin: 15px 0;
-        border-radius: 2px;
-    }
-    
-    .Curriculum-buttom i {
-        padding:  0 0 0 10px;
-        color: #fff;
     }
     
     .Curriculum-buttom a {
-        text-decoration: none;
-        color: #fff;
-        font-family: 'Nunito';
-        font-weight: bold;
         font-size: 2rem;
     }
 }
-
-@media (max-width: 759px) {
-    .home__description p {
-        font-size: 3rem;
-    }
-}
-
