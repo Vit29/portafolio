@@ -103,6 +103,9 @@ section {
         height:100vh;
         display: initial;
     }
+    .container-all .nav a {
+        font-size: 1.3rem;
+    }
 
     .pagination {
         width: 100%;
@@ -111,9 +114,9 @@ section {
 
     .nav {
         position: fixed;
-        transform: translate(-200px);
+        transform: translate(-400px);
         transition: all ease 1s;
-        width: 150px;
+        width: 100%;
         height: 100vh;
         z-index: 10;
     }
