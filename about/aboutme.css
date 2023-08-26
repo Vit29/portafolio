@@ -3,6 +3,7 @@
 #about {
     position: relative;
     justify-content: end;
+    /* background: #29343d; */
 }
 
 .about__description {

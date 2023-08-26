@@ -3,6 +3,7 @@
 #home {
     position: relative;
     align-items: end;
+    /* background: #1e2025; */
 }
 
 .home__description {
