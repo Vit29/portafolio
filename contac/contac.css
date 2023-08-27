@@ -2,7 +2,6 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-    /* background: #92a4b1; */
 }
 
 .form__container {
@@ -66,5 +65,15 @@
 
     .form__container {
         width: 80%;
+    }
+}
+
+@media (min-width: 759px) and (max-width: 1023px) {
+    #contac {
+        flex-direction: column;
+    }
+
+    .form__container {
+        width: 60%;
     }
 }

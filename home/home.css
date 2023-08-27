@@ -82,6 +82,7 @@
     .background_me {
         height: 90%;
         width: 70%;
+        top: -30px;
     }
 
     .home__description {
