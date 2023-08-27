@@ -66,7 +66,6 @@
         display: initial;
     }
     
-    
     .nav {
         position: fixed;
         transform: translate(-500px);
@@ -83,6 +82,12 @@
         transition-delay: calc(0.1s * var(--1));
         transform: translateX(500px);
         opacity: 1;
+    }
+
+    .nav-close {
+        transition-delay: calc(0.1s * var(--1));
+        transform: translateX(-500px);
+        background: red;
     }
     
     .container-all .nav a {

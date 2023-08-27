@@ -3,6 +3,11 @@ const nav = document.querySelector('.nav');
 
 
 toggle.addEventListener('click', () => {
-    // document.getElementById('toggle').classList.toggle('active');
     nav.classList.toggle('active');
+    
+})
+
+nav.addEventListener('click', () => {
+    document.getElementById('home-input').classList.toggle('nav-close');
+    nav.classList.remove('active')
 })
