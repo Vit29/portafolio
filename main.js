@@ -8,6 +8,5 @@ toggle.addEventListener('click', () => {
 })
 
 nav.addEventListener('click', () => {
-    document.getElementById('home-input').classList.toggle('nav-close');
     nav.classList.remove('active')
 })

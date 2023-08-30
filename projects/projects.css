@@ -104,7 +104,11 @@
     border: 3px dashed #fff;
 }
 
-@media (max-width: 700px) {
+.campos__oblicatorios span{
+    color: #fff;
+}
+
+@media (max-width: 759px) {
     
     .container__projects {
         display: flex;
@@ -117,6 +121,7 @@
 
     .container__projects .front p {
         padding:  0 40px;
+        
     }
         
     .container__projects .back img {
@@ -130,4 +135,43 @@
     .container__projects .project04{
         display: none;
     }
+ }
+
+@media (min-width: 759px) and (max-width:1023px) {
+
+    .container__projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container__projects .element-project:hover .front {
+        margin-top: -65%;
+    }
+
+    .container__projects .front h1 {
+
+        font-size: 3rem;
+    }
+
+    .container__projects .front p {
+        padding:  0 70px;
+        font-size: clamp(1rem, 3vw, 3rem);
+        
+    }
+        
+    .container__projects .back img {
+        width: 75%;
+        border-radius: 20px;
+    }
+    
+    .container__projects .project03{
+        display: none;
+    }
+    .container__projects .project04{
+        display: none;
+    }
+    .campos__oblicatorios span{
+        font-size: 1.5rem;
+    }
+
 }
