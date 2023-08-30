@@ -38,7 +38,6 @@
                 </ul>
             </div>
             <div class="pagination">
-                
                 <div id="home">
                     <div class="home__description">
                         <p>vitaly</p>
@@ -62,13 +61,13 @@
                 </div>
                 <div id="skills" >   
                     <div class="skills__container">
-                        <img src="logosSkills/htmlLogo.png" alt="">
-                        <img src="logosSkills/logo-css.png" alt="">
-                        <img src="logosSkills/logo-JS.png" alt="">
-                        <img src="logosSkills/logo-mysql.png" alt="">
-                        <img src="logosSkills/java-logo-1.png" alt="">
-                        <img src="logosSkills/logo-blender.png" alt="">
-                        <img src="logosSkills/logo-three-js.png" alt="">
+                        <img src="logosSkills/htmlLogo.png" alt="html">
+                        <img src="logosSkills/logo-css.png" alt="css">
+                        <img src="logosSkills/logo-JS.png" alt="js">
+                        <img src="logosSkills/logo-mysql.png" alt="mysql">
+                        <img src="logosSkills/java-logo-1.png" alt="java">
+                        <img src="logosSkills/logo-blender.png" alt="blender">
+                        <img src="logosSkills/logo-three-js.png" alt="three.js">
                     </div>
                 </div>
                 <div id="projects" >   
@@ -96,22 +95,22 @@
                 </div>
                 <div id="contac" >   
                     <img src="contac/img/buzon.png" alt="">
-                    <form class="form__container" action="submeter-formulario.php" method="post">
+                    <form class="form__container" action="https://formsubmit.co/vitaly.varela@hotmail.com" method="POST">
                         <div class="nombre__email">
                             <p >
                                 <label for="nombre" class="colocar_nombre">
                                     <span class="obligatorio"></span>
                                 </label>
-                                <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
-                                    placeholder="Escribe tu nombre">
+                                <input type="text" name="nombre" id="nombre" required="obligatorio"
+                                    placeholder="Nombre">
                             </p >
         
                             <p>
                                 <label for="email" class="colocar_email">
                                     <span class="obligatorio"></span>
                                 </label>
-                                <input type="email" name="introducir_email" id="email" required="obligatorio"
-                                    placeholder="Escribe tu Email">
+                                <input type="email" name="email" id="email" required="obligatorio"
+                                    placeholder="Email">
                             </p>
                         </div>
         
@@ -119,14 +118,14 @@
                             <p>
                                 <label for="telefone" class="colocar_telefono">
                                 </label>
-                                <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono">
                             </p>
                             <p>
                                 <label for="asunto" class="colocar_asunto">
                                     <span class="obligatorio"></span>
                                 </label>
-                                <input type="text" name="introducir_asunto" id="assunto" required="obligatorio"
-                                    placeholder="Escribe un asunto">
+                                <input type="text" name="asunto" id="assunto" required="obligatorio"
+                                    placeholder="Asunto">
                             </p>
                         </div>
                         
@@ -134,19 +133,22 @@
                             <label for="mensaje" class="colocar_mensaje">
                                 <span class="obligatorio"></span>
                             </label>
-                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio"
-                                placeholder="Deja aquí tu comentario..."></textarea>
+                            <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio"
+                                placeholder="Mensaje..."></textarea>
                         </p>
                 
                         <p class="boton__enviar">
-                            <button type="submit" name="enviar_formulario" id="enviar">
+                            <button type="submit"  id="enviar">
                                 Enviar
                             </button>
                         </p>
                         <p class="campos__oblicatorios">
                             <span class="obligatorio"> *los campos son obligatorios. </span>
                         </p>
-        
+                        
+                        
+                        <tipo de entrada="oculto" nombre="_next" valor="https://vit29.github.io/portafolio"></tipo>
+                        <tipo de entrada="oculto" nombre="_captcha" valor="false"></tipo>
                     </form>
                 </div>
 
