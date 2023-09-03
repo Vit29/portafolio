@@ -9,16 +9,24 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     
     justify-items: center;
-    gap: 1rem;
+    gap: .5rem;
     width: 90%;
     height: auto;
 }
 
 .skills__container img{
-    width: 120px;
+    width: 100%;
     background: #fff;
     padding: 10px;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 3px;
+}
+
+@media (max-width: 759px) {
+    .skills__container {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: .5rem;
+        height: 80%;
+    }
 }

@@ -24,7 +24,7 @@
     background-size: cover;
     width: 50%;
     height: 145%;
-    mix-blend-mode: screen;
+    filter: grayscale();
 }
 
 .home__description p {
