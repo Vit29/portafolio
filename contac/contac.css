@@ -55,6 +55,10 @@
     margin-top: 30px;
 }
 
+.campos__oblicatorios span {
+    color: #ffffff;
+}
+
 @media (max-width: 759px) {
     #contac {
         flex-direction: column;
@@ -90,8 +94,6 @@
         font-size: 1.5rem;
     }
 
-    .campos__oblicatorios span {
-        color: #ffffff;
-    }
+    
 
 }
