@@ -90,4 +90,8 @@
         font-size: 1.5rem;
     }
 
+    .campos__oblicatorios span {
+        color: #ffffff;
+    }
+
 }
