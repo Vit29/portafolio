@@ -20,7 +20,7 @@ section {
     height: 685px;
 }
 
-#home, #about, #skills, #projects, #contac {
+#home, #about, #skills, #projects, #contact {
     width: 100%;
     height: 100%;
     display: flex;

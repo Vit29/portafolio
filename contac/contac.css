@@ -1,4 +1,4 @@
-#contac {
+#contact {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
@@ -47,7 +47,7 @@
     cursor: pointer;
     
 }
-#contac img {
+#contact img {
     width: 300px;
 }
 
@@ -60,11 +60,11 @@
 }
 
 @media (max-width: 759px) {
-    #contac {
+    #contact {
         flex-direction: column;
     }
 
-    #contac img {
+    #contact img {
         width: 250px;
     }
 
@@ -74,11 +74,11 @@
 }
 
 @media (min-width: 759px) and (max-width: 1023px) {
-    #contac {
+    #contact {
         flex-direction: column;
     }
 
-    #contac img {
+    #contact img {
         width: 400px;
     }
 
