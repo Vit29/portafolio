@@ -3,7 +3,6 @@
 #home {
     position: relative;
     align-items: end;
-    /* background: #1e2025; */
 }
 
 .home__description {
@@ -35,13 +34,25 @@
     line-height:.9;
 }
 
+.redes-CV {
+    display: flex;
+    margin-top: 15px;
+}
+
+.redes-CV > a {
+    margin-left:20px;
+}
+.redes-CV > a i {
+    font-size: 40px;
+    color: #fff;
+}
+
 .Curriculum-buttom {
     background: red;
     width: 150px;
     text-align: center;
     height: 40px;
     padding: 10px;
-    margin: 15px 0;
     border-radius: 2px;
 }
 
