@@ -1,7 +1,6 @@
 #skills {
     justify-content: center;
     align-items: center;
-    /* background: #3c5665; */
 }
 
 .skills__container {
@@ -25,7 +24,7 @@
 
 @media (max-width: 759px) {
     .skills__container {
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
         gap: .5rem;
         height: 80%;
     }

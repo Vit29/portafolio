@@ -53,7 +53,7 @@
     text-align: center;
     height: 40px;
     padding: 10px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .Curriculum-buttom i {
@@ -84,7 +84,7 @@
     }
 
     .home__description p {
-        font-size: 3.2em;
+        font-size: 3.5em;
     }
 }
 
