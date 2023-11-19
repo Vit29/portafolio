@@ -29,7 +29,7 @@
 .home__description p {
     font-family: 'montserrat', sans-serif;
     color: #fff;
-    font-size: clamp(3.2rem, 7vw ,9rem);
+    font-size: 7rem;
     text-transform: uppercase;
     line-height:.9;
 }
@@ -84,7 +84,7 @@
     }
 
     .home__description p {
-        font-size: clamp(2.8rem, 7vw ,9rem);
+        font-size: 3.2em;
     }
 }
 
@@ -111,5 +111,10 @@
     
     .Curriculum-buttom a {
         font-size: 2rem;
+    }
+
+    .redes-CV > a i {
+        font-size: 65px;
+        color: #fff;
     }
 }
