@@ -39,7 +39,7 @@
     color: rgba(165, 163, 163, 0.521);
     
 }
-.form__container .boton__enviar  button{
+.form__container .boton__enviar {
     background: red;
     color: #ffffff;
     font-family: 'Nunito';
@@ -86,7 +86,7 @@
         width:70%;
     }
 
-    .form__container input, textarea, button{
+    .form__container .boton__enviar input, textarea {
         border-radius: 3px;
         border-style: none;
         width: 100%;

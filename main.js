@@ -1,12 +1,85 @@
 const toggle = document.getElementById('toggle') ;
 const nav = document.querySelector('.nav');
-
+const cards = document.querySelectorAll('.skills__container button');
+// console.log(cards);
 
 toggle.addEventListener('click', () => {
     nav.classList.toggle('active');
-    
 })
 
 nav.addEventListener('click', () => {
     nav.classList.remove('active')
 })
+
+let numbers = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12]; 
+numbers = numbers.sort(()=> {
+    return Math.random() - 0.5
+})
+console.log(numbers);
+
+cards.forEach(element => {
+    element.addEventListener('click',()=> {
+        const id = element.id
+        // console.log('el elmento selecionado es: '+ id);
+        showCard(id)
+    })
+});
+
+let count = 0;
+let cardOne = null
+let cardTwo = null
+let resultOne = null;
+let resultTwo = null;
+
+function showCard (id) {
+    count++;
+    if ( count == 1) {
+        cardOne = document.getElementById(id);
+        resultOne = numbers[id];
+        cardOne.innerHTML = `<img src="img/${resultOne}.png">`;
+        cardOne.disabled = true;
+        //color border 
+        cardOne.style.border = 'solid 1px yellow';
+        // color shadow 
+        cardOne.style.boxShadow = '0 0 10px 1px yellow';
+    } else if (count == 2) {
+        cardTwo = document.getElementById(id);
+        resultTwo = numbers[id];
+        cardTwo.innerHTML = `<img src="img/${resultTwo}.png">`;
+        cardTwo.disabled = true;
+        //color border
+        cardTwo.style.border = 'border 1px yellow';
+        // color shadow
+        cardTwo.style.boxShadow = '0 0 10px 1px yellow';
+        if (resultOne == resultTwo) {
+            count = 0;
+            // color borde
+            cardOne.style.border = 'solid 1px green';
+            cardTwo.style.border = 'solid 1px green';
+            // color sombra
+            cardOne.style.boxShadow = '0 0 10px 1px green';
+            cardTwo.style.boxShadow = '0 0 10px 1px green';
+            
+        } else {
+            //color border
+            cardOne.style.border = 'solid 1px red';
+            cardTwo.style.border = 'solid 1px red';
+            //color shadow
+            cardOne.style.boxShadow = '0 0 10px 1px red';
+            cardTwo.style.boxShadow = '0 0 10px 1px red';
+            setTimeout(()=> {
+                cardOne.innerHTML = '';
+                cardTwo.innerHTML = '';
+                cardOne.disabled = false;
+                cardTwo.disabled = false;
+                count = 0;
+                // colocar cielueta 
+                cardOne.style.border = 'dashed 1px white';
+                cardTwo.style.border = 'dashed 1px white';
+                // remover sombra
+                cardOne.style.boxShadow = 'none';
+                cardTwo.style.boxShadow = 'none';
+            },1000)
+        }
+    }
+}

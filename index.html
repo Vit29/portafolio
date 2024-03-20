@@ -16,15 +16,14 @@
     <link rel="stylesheet" href="home/home.css">
     <link rel="stylesheet" href="about/aboutme.css">
     <link rel="stylesheet" href="skills/skills.css">
-    <link rel="stylesheet" href="contac/contac.css">
     <link rel="stylesheet" href="projects/projects.css">
+    <link rel="stylesheet" href="contac/contac.css">
     <title>Portafolio</title>
 </head>
 <body>
 
     <section >
         <div class="container-all">
-            
             <div id="toggle" class="toggle">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -73,20 +72,38 @@
                     </div>
                 </div>
                 <div id="skills" >   
+                    
+                    <p>Diviertete descubriendo mis skills</p>
+
                     <div class="skills__container">
-                        <img src="logosSkills/htmlLogo.png" alt="html">
-                        <img src="logosSkills/logo-css.png" alt="css">
-                        <img src="logosSkills/logo-JS.png" alt="js">
-                        <img src="logosSkills/logo-git.png" alt="js">
-                        <img src="logosSkills/logo-mysql.png" alt="mysql">
-                        <img src="logosSkills/java-logo-1.png" alt="java">
-                        <img src="logosSkills/logo-blender.png" alt="blender">
-                        <img src="logosSkills/logo-three-js.png" alt="three.js">
+                        <button id="0" class="item"></button>
+                        <button id="1" class="item"></button>
+                        <button id="2" class="item"></button>
+                        <button id="3" class="item"></button>
+                        <button id="4" class="item"></button>
+                        <button id="5" class="item"></button>
+                        <button id="6" class="item"></button>
+                        <button id="7" class="item"></button>
+                        <button id="8" class="item"></button>
+                        <button id="9" class="item"></button>
+                        <button id="10" class="item"></button>
+                        <button id="11" class="item"></button>
+                        <button id="12" class="item"></button>
+                        <button id="13" class="item"></button>
+                        <button id="14" class="item"></button>
+                        <button id="15" class="item"></button>
+                        <button id="16" class="item"></button>
+                        <button id="17" class="item"></button>
+                        <button id="18" class="item"></button>
+                        <button id="19" class="item"></button>
+                        <button id="20" class="item"></button>
+                        <button id="21" class="item"></button>
+                        <button id="22" class="item"></button>
+                        <button id="23" class="item"></button>
                     </div>
                 </div>
                 <div id="projects" >   
                     <div class="container__projects">
-
                         <div class="element-project  project01">
                             <div class="front">
                                 <img src="projects/img/consultores-web.png" alt="img pagina">
@@ -126,7 +143,6 @@
                                 <input type="text" name="nombre" id="nombre" required="obligatorio"
                                     placeholder="Nombre">
                             </p >
-        
                             <p>
                                 <label for="email" class="colocar_email">
                                     <span class="obligatorio"></span>
@@ -135,7 +151,6 @@
                                     placeholder="Email">
                             </p>
                         </div>
-        
                         <div class="telefono__asunto">
                             <p>
                                 <label for="telefone" class="colocar_telefono">
@@ -150,7 +165,6 @@
                                     placeholder="Asunto">
                             </p>
                         </div>
-                        
                         <p class="asunto">
                             <label for="mensaje" class="colocar_mensaje">
                                 <span class="obligatorio"></span>
@@ -158,9 +172,8 @@
                             <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio"
                                 placeholder="Mensaje..."></textarea>
                         </p>
-                
-                        <p class="boton__enviar">
-                            <button type="submit"  id="enviar">
+                        <p >
+                            <button class="boton__enviar" type="submit"  id="enviar">
                                 Enviar
                             </button>
                         </p>
@@ -171,10 +184,8 @@
                         <input type="hidden" name="_captcha" value="false">
                     </form>
                 </div>
-
             </div>
         </div>
-
     </section>
 </body>
 <script src="main.js"></script>
