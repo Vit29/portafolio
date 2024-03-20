@@ -1,7 +1,13 @@
 const toggle = document.getElementById('toggle') ;
 const nav = document.querySelector('.nav');
 const cards = document.querySelectorAll('.skills__container button');
-// console.log(cards);
+
+const selected = new Audio('./skills/sounds/duck-toy-sound.mp3')
+// const selected = new Audio('./skills/sounds/mac-quack.mp3')
+const fail = new Audio('./skills/sounds/roblox-death.mp3')
+// const correct = new Audio('./skills/sounds/plankton-correct.mp3')
+const correct = new Audio('./skills/sounds/anime-wow.mp3')
+const winner = new Audio('./skills/sounds/chipi-chapa.mp3')
 
 toggle.addEventListener('click', () => {
     nav.classList.toggle('active');
@@ -20,7 +26,6 @@ console.log(numbers);
 cards.forEach(element => {
     element.addEventListener('click',()=> {
         const id = element.id
-        // console.log('el elmento selecionado es: '+ id);
         showCard(id)
     })
 });
@@ -30,6 +35,7 @@ let cardOne = null
 let cardTwo = null
 let resultOne = null;
 let resultTwo = null;
+let successes = 0;
 
 function showCard (id) {
     count++;
@@ -42,6 +48,7 @@ function showCard (id) {
         cardOne.style.border = 'solid 1px yellow';
         // color shadow 
         cardOne.style.boxShadow = '0 0 10px 1px yellow';
+        selected.play()
     } else if (count == 2) {
         cardTwo = document.getElementById(id);
         resultTwo = numbers[id];
@@ -59,7 +66,11 @@ function showCard (id) {
             // color sombra
             cardOne.style.boxShadow = '0 0 10px 1px green';
             cardTwo.style.boxShadow = '0 0 10px 1px green';
-            
+            correct.play();
+            successes++;
+            if (successes == 12) {
+                winner.play();
+            }
         } else {
             //color border
             cardOne.style.border = 'solid 1px red';
@@ -67,6 +78,8 @@ function showCard (id) {
             //color shadow
             cardOne.style.boxShadow = '0 0 10px 1px red';
             cardTwo.style.boxShadow = '0 0 10px 1px red';
+            //audio
+            fail.play()
             setTimeout(()=> {
                 cardOne.innerHTML = '';
                 cardTwo.innerHTML = '';

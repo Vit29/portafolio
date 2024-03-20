@@ -1,6 +1,6 @@
 
 #skills {
-    justify-content: end;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -9,7 +9,6 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
     width: 60%;
-    margin-right: 20px;
 }
 
 #skills p {
@@ -42,21 +41,23 @@
     border-radius: 4px;
 }
 
-@media (max-width: 759px) {
+@media (max-width: 758px) {
 
     #skills {
-        justify-content: center;
+        /* justify-content: end; */
+        /* align-items: end; */
         flex-direction: column;
     }
 
     #skills p {
         font-size: 1rem;
-        width: 80%;
+        width: 100%;
+        text-align: start;
     }
 
     .skills__container {
         grid-template-columns: repeat(4, 1fr);
         width: 95%;
-        margin: 0;
+        margin: 0 0 1.5rem 0;
     }
 }
