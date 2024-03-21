@@ -85,8 +85,8 @@ function showCard (id) {
                 cardTwo.disabled = false;
                 count = 0;
                 // colocar cielueta 
-                cardOne.style.border = 'dashed 1px white';
-                cardTwo.style.border = 'dashed 1px white';
+                cardOne.style.border = 'dashed 3px white';
+                cardTwo.style.border = 'dashed 3px white';
                 // remover sombra
                 cardOne.style.boxShadow = 'none';
                 cardTwo.style.boxShadow = 'none';

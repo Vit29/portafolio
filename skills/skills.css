@@ -12,7 +12,7 @@
 }
 
 .skills-description {
-    width: 35%;
+    width: 30%;
     text-align: center;
 }
 
@@ -37,7 +37,7 @@
     border: none;
     border-radius: 5px;
     font-size: 0;
-    border: dashed 1px white;
+    border: dashed 3px white;
     background-color: transparent;
 }
 
@@ -53,11 +53,7 @@
 
     #skills {
         flex-direction: column;
-    }
-
-    .skills-description {
-        width: 90%;
-        text-align: start;
+        justify-content: end;
     }
     
     .skills__container {
@@ -65,4 +61,13 @@
         width: 95%;
         margin: 0 0 1.5rem 0;
     }
+    .skills-description {
+        width: 90%;
+        text-align: start;
+    }
+    
+    .skills-description p {
+        padding-bottom: 1rem;
+    }
+    
 }
