@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
 body {
     background: #222220;
     display: flex;

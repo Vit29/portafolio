@@ -3,10 +3,8 @@ const nav = document.querySelector('.nav');
 const cards = document.querySelectorAll('.skills__container button');
 
 const selected = new Audio('./skills/sounds/duck-toy-sound.mp3')
-// const selected = new Audio('./skills/sounds/mac-quack.mp3')
 const fail = new Audio('./skills/sounds/roblox-death.mp3')
-// const correct = new Audio('./skills/sounds/plankton-correct.mp3')
-const correct = new Audio('./skills/sounds/anime-wow.mp3')
+const correct = new Audio('./skills/sounds/plankton-correct.mp3')
 const winner = new Audio('./skills/sounds/chipi-chapa.mp3')
 
 toggle.addEventListener('click', () => {
@@ -42,7 +40,7 @@ function showCard (id) {
     if ( count == 1) {
         cardOne = document.getElementById(id);
         resultOne = numbers[id];
-        cardOne.innerHTML = `<img src="img/${resultOne}.png">`;
+        cardOne.innerHTML = `<img src="skills/img/${resultOne}.png">`;
         cardOne.disabled = true;
         //color border 
         cardOne.style.border = 'solid 1px yellow';
@@ -52,7 +50,7 @@ function showCard (id) {
     } else if (count == 2) {
         cardTwo = document.getElementById(id);
         resultTwo = numbers[id];
-        cardTwo.innerHTML = `<img src="img/${resultTwo}.png">`;
+        cardTwo.innerHTML = `<img src="skills/img/${resultTwo}.png">`;
         cardTwo.disabled = true;
         //color border
         cardTwo.style.border = 'border 1px yellow';
