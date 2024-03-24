@@ -2,8 +2,8 @@ const toggle = document.getElementById('toggle') ;
 const nav = document.querySelector('.nav');
 const cards = document.querySelectorAll('.skills__container button');
 
-const selected = new Audio('./skills/sounds/duck-toy-sound.mp3')
-const fail = new Audio('./skills/sounds/roblox-death.mp3')
+const selected = new Audio('./skills/sounds/duck-toy.mp3')
+const fail = new Audio('./skills/sounds/roblox.mp3')
 const correct = new Audio('./skills/sounds/plankton-correct.mp3')
 const winner = new Audio('./skills/sounds/chipi-chapa.mp3')
 
@@ -19,12 +19,11 @@ let numbers = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12];
 numbers = numbers.sort(()=> {
     return Math.random() - 0.5
 })
-console.log(numbers);
 
 cards.forEach(element => {
     element.addEventListener('click',()=> {
         const id = element.id
-        showCard(id)
+        showCard(element,id)
     })
 });
 
@@ -35,7 +34,7 @@ let resultOne = null;
 let resultTwo = null;
 let successes = 0;
 
-function showCard (id) {
+function showCard (element,id) {
     count++;
     if ( count == 1) {
         cardOne = document.getElementById(id);
@@ -47,6 +46,7 @@ function showCard (id) {
         // color shadow 
         cardOne.style.boxShadow = '0 0 10px 1px yellow';
         selected.play()
+        duckSoundAnimate(cardOne)
     } else if (count == 2) {
         cardTwo = document.getElementById(id);
         resultTwo = numbers[id];
@@ -65,7 +65,9 @@ function showCard (id) {
             cardOne.style.boxShadow = '0 0 10px 1px green';
             cardTwo.style.boxShadow = '0 0 10px 1px green';
             correct.play();
+            correctSoundAnimate(cardOne,cardTwo);
             successes++;
+
             if (successes == 12) {
                 winner.play();
             }
@@ -78,6 +80,7 @@ function showCard (id) {
             cardTwo.style.boxShadow = '0 0 10px 1px red';
             //audio
             fail.play()
+            failSoundAnimate(cardOne,cardTwo)
             setTimeout(()=> {
                 cardOne.innerHTML = '';
                 cardTwo.innerHTML = '';
@@ -90,7 +93,29 @@ function showCard (id) {
                 // remover sombra
                 cardOne.style.boxShadow = 'none';
                 cardTwo.style.boxShadow = 'none';
+                // element.classList.remove('animate');
             },1000)
         }
     }
+}
+
+function duckSoundAnimate (element) {
+    element.classList.add('animate');
+    setTimeout(()=> {
+        element.classList.remove('animate')
+    },1000)
+}
+
+function failSoundAnimate (one,two) {
+    one.classList.add('shake');
+    two.classList.add('shake');
+    setTimeout(()=> {
+        one.classList.remove('shake');
+        two.classList.remove('shake');
+    },1000)
+}
+
+function correctSoundAnimate (cardOne, cardTwo) {
+    cardOne.classList.add('correct');
+    cardTwo.classList.add('correct');
 }

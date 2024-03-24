@@ -49,6 +49,7 @@
 }
 #contact img {
     width: 300px;
+    height: 300px;
 }
 
 .boton__enviar button ,.telefono__asunto{
@@ -66,6 +67,7 @@
 
     #contact img {
         width: 250px;
+        height: 250px;
     }
 
     .form__container {
@@ -80,6 +82,8 @@
 
     #contact img {
         width: 400px;
+        height: 400px;
+        
     }
 
     .form__container {
