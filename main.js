@@ -70,6 +70,12 @@ function showCard (element,id) {
 
             if (successes == 12) {
                 winner.play();
+                confetti(
+                    {
+                        particleCount: 150,
+                        spread: 180
+                    }
+                );
             }
         } else {
             //color border
