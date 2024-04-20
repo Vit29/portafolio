@@ -54,6 +54,10 @@
     animation: correctSound ease 1s;
 }
 
+.item.animateWin {
+    animation: animateWin infinite 1s;
+}
+
 @keyframes duckSound {
     0%, 100% {transform: scale(1);}
     50% {transform: scale(0.9);}
@@ -71,6 +75,18 @@
     0%, 100% {transform: scale(1);}
     50% {transform: scale(1.2);}
 }
+
+@keyframes animateWin {
+    0% { transform: rotate(0deg);}
+    25%{ transform: rotate(10deg);}
+    50%{ transform: rotate(-10deg);}
+    75%{ transform: rotate(10deg);}
+    100%{ transform: rotate(0deg);}
+}
+
+/* .item:nth-child(odd) {
+    background-color: red;
+} */
 
 .skills__container img {
     width: 100%;

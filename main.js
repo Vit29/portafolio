@@ -67,15 +67,39 @@ function showCard (element,id) {
             correct.play();
             correctSoundAnimate(cardOne,cardTwo);
             successes++;
-
             if (successes == 12) {
                 winner.play();
-                confetti(
-                    {
-                        particleCount: 150,
-                        spread: 180
-                    }
-                );
+                var duration = 12 * 1000;
+                var end = Date.now() + duration;
+
+                (function frame() {
+                // launch a few confetti from the left edge
+                confetti({
+                    particleCount: 7,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0, y: 0.8}
+                });
+                // and launch a few from the right edge
+                confetti({
+                    particleCount: 7,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 , y: 0.8}
+                });
+
+                // keep going until we are out of time
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+                }());
+
+                cards.forEach((card) => {
+                    card.classList.add('animateWin');
+                    setTimeout(() => {
+                        card.classList.remove('animateWin')
+                    },12000)
+                })
             }
         } else {
             //color border
