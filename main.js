@@ -7,6 +7,7 @@ const fail = new Audio('./skills/sounds/roblox.mp3');
 const correct = new Audio('./skills/sounds/plankton-correct.mp3');
 const winner = new Audio('./skills/sounds/chipi-chapa.mp3');
 
+
 console.log(document.body.clientWidth < 500);
 
 toggle.addEventListener('click', () => {
@@ -58,6 +59,7 @@ function showCard (element,id) {
         cardTwo.style.border = 'border 1px yellow';
         // color shadow
         cardTwo.style.boxShadow = '0 0 10px 1px yellow';
+        
         if (resultOne == resultTwo) {
             count = 0;
             // color borde
@@ -69,11 +71,24 @@ function showCard (element,id) {
             correct.play();
             correctSoundAnimate(cardOne,cardTwo);
             successes++;
-            if (document.body.clientWidth < 500) {
-                animationWinnerMovil()
-            } else {
-                animationWinner()
+
+            if (successes == 1) {
+                winner.play();
+                cards.forEach((card) => {
+                    card.classList.add('animateWin');
+                    setTimeout(() => {
+                        card.classList.remove('animateWin')
+                    },13000)
+                })
             }
+            const duration = 12 * 1000;
+            const end = Date.now() + duration; 
+            if (document.body.clientWidth < 500) {
+                animationWinnerMovil(end)
+            } else {
+                animationWinner(end)
+            }
+
         } else {
             //color border
             cardOne.style.border = 'solid 1px red';
@@ -123,21 +138,14 @@ function correctSoundAnimate (cardOne, cardTwo) {
     cardTwo.classList.add('correct');
 }
 
-function animationWinner() {
-    if (successes == 1) {
-        winner.play();
-        var duration = 12 * 1000;
-        var end = Date.now() + duration;
-
+function animationWinner(end) {
         (function frame() {
-        // launch a few confetti from the left edge
         confetti({
             particleCount: 7,
             angle: 60,
             spread: 55,
             origin: { x: 0, y: 0.8}
         });
-        // and launch a few from the right edge
         confetti({
             particleCount: 7,
             angle: 120,
@@ -145,47 +153,22 @@ function animationWinner() {
             origin: { x: 1 , y: 0.8}
         });
 
-        // keep going until we are out of time
         if (Date.now() < end) {
             requestAnimationFrame(frame);
         }
         }());
-
-        cards.forEach((card) => {
-            card.classList.add('animateWin');
-            setTimeout(() => {
-                card.classList.remove('animateWin')
-            },12000)
-        })
-    }
 }
 
-function animationWinnerMovil () {
-    if (successes == 1) {
-        winner.play();
-        var duration = 13 * 1000;
-        var end = Date.now() + duration;
-
+function animationWinnerMovil (end) {
         (function frame() {
-        // launch a few confetti from the left edge
         confetti({
             particleCount: 7,
-            // angle: 60,
             spread: 55,
             origin: { x: 0.5, y: 0.7}
         });
 
-        // keep going until we are out of time
         if (Date.now() < end) {
             requestAnimationFrame(frame);
         }
         }());
-
-        cards.forEach((card) => {
-            card.classList.add('animateWin');
-            setTimeout(() => {
-                card.classList.remove('animateWin')
-            },13000)
-        })
-    } 
-}
+} 
