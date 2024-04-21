@@ -78,15 +78,19 @@ function showCard (element,id) {
                     card.classList.add('animateWin');
                     setTimeout(() => {
                         card.classList.remove('animateWin')
-                    },13000)
+                    },12000)
                 })
-            }
-            const duration = 12 * 1000;
-            const end = Date.now() + duration; 
-            if (document.body.clientWidth < 500) {
-                animationWinnerMovil(end)
-            } else {
-                animationWinner(end)
+                const duration = 12 * 1000;
+                const end = Date.now() + duration; 
+                // if (document.body.clientWidth < 500) {
+                //     animationWinnerMovil(end)
+                // } else {
+                //     animationWinner(end)
+                // }
+                document.body.clientWidth < 500 
+                ? animationWinnerMovil(end)
+                : animationWinner(end)
+                
             }
 
         } else {
