@@ -72,7 +72,7 @@ function showCard (element,id) {
             correctSoundAnimate(cardOne,cardTwo);
             successes++;
 
-            if (successes == 1) {
+            if (successes == 12) {
                 winner.play();
                 cards.forEach((card) => {
                     card.classList.add('animateWin');
