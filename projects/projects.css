@@ -5,13 +5,10 @@
 .container__projects {
     width: 80%;
     height: 80%;
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-
     gap: 1rem;
-
 }
 
 .element-project {
@@ -19,7 +16,6 @@
     height: 100%;
     text-align: center;
 }
-
 
 .container__projects .front {
     height: 100%;

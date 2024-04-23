@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Montserrat:wght@900&family=Nunito&family=Poiret+One&family=Poppins:wght@600&family=Rubik&family=Ubuntu&display=swap');
-
 #about {
     position: relative;
     justify-content: end;
-    /* background: #29343d; */
 }
 
 .about__description {

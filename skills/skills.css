@@ -42,28 +42,28 @@
     
 }
 
-.item.animate {
-    animation: duckSound ease-out 500ms;
+.item.scaleAnimate {
+    animation: scaleAnimate ease-out 500ms;
 }
 
-.item.shake {
-    animation: failSound ease 400ms;
+.item.shakeAnimation {
+    animation: shakeAnimation ease 400ms;
 }
 
-.item.correct {
-    animation: correctSound ease 1s;
+.item.correctAnimation {
+    animation: correctAnswerAnimate ease 1s;
 }
 
-.item.animateWin {
-    animation: animateWin infinite 1s;
+.item.winAnimation {
+    animation: winAnimation infinite 1s;
 }
 
-@keyframes duckSound {
+@keyframes scaleAnimate {
     0%, 100% {transform: scale(1);}
     50% {transform: scale(0.9);}
 }
 
-@keyframes failSound {
+@keyframes shakeAnimation {
     0% { transform: rotate(0deg);}
     25%{ transform: rotate(10deg);}
     50%{ transform: rotate(-10deg);}
@@ -71,22 +71,18 @@
     100%{ transform: rotate(0deg);}
 }
 
-@keyframes correctSound {
+@keyframes correctAnswerAnimate {
     0%, 100% {transform: scale(1);}
-    50% {transform: scale(1.2);}
+    50% {transform: scale(1.1);}
 }
 
-@keyframes animateWin {
+@keyframes winAnimation {
     0% { transform: rotate(0deg);}
     25%{ transform: rotate(10deg);}
     50%{ transform: rotate(-10deg);}
     75%{ transform: rotate(10deg);}
     100%{ transform: rotate(0deg);}
 }
-
-/* .item:nth-child(odd) {
-    background-color: red;
-} */
 
 .skills__container img {
     width: 100%;

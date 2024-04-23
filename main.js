@@ -5,10 +5,7 @@ const cards = document.querySelectorAll('.skills__container button');
 const selected = new Audio('./skills/sounds/duck-toy.mp3');
 const fail = new Audio('./skills/sounds/roblox.mp3');
 const correct = new Audio('./skills/sounds/plankton-correct.mp3');
-const winner = new Audio('./skills/sounds/chipi-chapa.mp3');
-
-
-console.log(document.body.clientWidth < 500);
+const winnerSound = new Audio('./skills/sounds/chipi-chapa.mp3');
 
 toggle.addEventListener('click', () => {
     nav.classList.toggle('active');
@@ -18,17 +15,9 @@ nav.addEventListener('click', () => {
     nav.classList.remove('active')
 })
 
-let numbers = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12]; 
-numbers = numbers.sort(()=> {
-    return Math.random() - 0.5
-})
-
-cards.forEach(element => {
-    element.addEventListener('click',()=> {
-        const id = element.id
-        showCard(element,id)
-    })
-});
+const gameOver = 12;
+const MOBILE_SCREEN_WIDTH = 758;
+const ANIMATION_DURATION = 12000;
 
 let count = 0;
 let cardOne = null
@@ -36,8 +25,34 @@ let cardTwo = null
 let resultOne = null;
 let resultTwo = null;
 let successes = 0;
+let numbers = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12];
 
-function showCard (element,id) {
+numbers = numbers.sort(()=> {
+    return Math.random() - 0.5
+})
+
+cards.forEach(element => {
+    element.addEventListener('click',()=> {
+        const id = element.id
+        showCard(id);
+    })
+});
+
+function winner () {
+    winnerSound.play();
+    cards.forEach((card) => {
+        card.classList.add('winAnimation');
+        setTimeout(() => {
+            card.classList.remove('winAnimation')
+        },ANIMATION_DURATION)
+    })
+    const end = Date.now() + ANIMATION_DURATION
+    document.body.clientWidth < MOBILE_SCREEN_WIDTH
+    ? animationWinnerMovil(end)
+    : animationWinner(end)
+}
+
+function showCard (id) {
     count++;
     if ( count == 1) {
         cardOne = document.getElementById(id);
@@ -49,7 +64,7 @@ function showCard (element,id) {
         // color shadow 
         cardOne.style.boxShadow = '0 0 10px 1px yellow';
         selected.play()
-        duckSoundAnimate(cardOne)
+        scaleAnimation(cardOne)
     } else if (count == 2) {
         cardTwo = document.getElementById(id);
         resultTwo = numbers[id];
@@ -69,30 +84,11 @@ function showCard (element,id) {
             cardOne.style.boxShadow = '0 0 10px 1px green';
             cardTwo.style.boxShadow = '0 0 10px 1px green';
             correct.play();
-            correctSoundAnimate(cardOne,cardTwo);
+            correctAnswerAnimate(cardOne,cardTwo);
             successes++;
-
-            if (successes == 12) {
-                winner.play();
-                cards.forEach((card) => {
-                    card.classList.add('animateWin');
-                    setTimeout(() => {
-                        card.classList.remove('animateWin')
-                    },12000)
-                })
-                const duration = 12 * 1000;
-                const end = Date.now() + duration; 
-                // if (document.body.clientWidth < 500) {
-                //     animationWinnerMovil(end)
-                // } else {
-                //     animationWinner(end)
-                // }
-                document.body.clientWidth < 500 
-                ? animationWinnerMovil(end)
-                : animationWinner(end)
-                
+            if (successes == gameOver) {
+                winner()
             }
-
         } else {
             //color border
             cardOne.style.border = 'solid 1px red';
@@ -121,58 +117,58 @@ function showCard (element,id) {
     }
 }
 
-function duckSoundAnimate (element) {
-    element.classList.add('animate');
+function scaleAnimation (cardOne) {
+    cardOne.classList.add('scaleAnimate');
     setTimeout(()=> {
-        element.classList.remove('animate')
-    },1000)
+        cardOne.classList.remove('scaleAnimate');
+    },500)
 }
 
 function failSoundAnimate (one,two) {
-    one.classList.add('shake');
-    two.classList.add('shake');
+    one.classList.add('shakeAnimation');
+    two.classList.add('shakeAnimation');
     setTimeout(()=> {
-        one.classList.remove('shake');
-        two.classList.remove('shake');
+        one.classList.remove('shakeAnimation');
+        two.classList.remove('shakeAnimation');
     },1000)
 }
 
-function correctSoundAnimate (cardOne, cardTwo) {
-    cardOne.classList.add('correct');
-    cardTwo.classList.add('correct');
+function correctAnswerAnimate (cardOne, cardTwo) {
+    cardOne.classList.add('correctAnimation');
+    cardTwo.classList.add('correctAnimation');
 }
 
 function animationWinner(end) {
-        (function frame() {
-        confetti({
-            particleCount: 7,
-            angle: 60,
-            spread: 55,
-            origin: { x: 0, y: 0.8}
-        });
-        confetti({
-            particleCount: 7,
-            angle: 120,
-            spread: 55,
-            origin: { x: 1 , y: 0.8}
-        });
+    (function frame() {
+    confetti({
+        particleCount: 7,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0, y: 0.8}
+    });
+    confetti({
+        particleCount: 7,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 , y: 0.8}
+    });
 
-        if (Date.now() < end) {
-            requestAnimationFrame(frame);
-        }
-        }());
+    if (Date.now() < end) {
+        requestAnimationFrame(frame);
+    }
+    }());
 }
 
 function animationWinnerMovil (end) {
-        (function frame() {
-        confetti({
-            particleCount: 7,
-            spread: 55,
-            origin: { x: 0.5, y: 0.7}
-        });
+    (function frame() {
+    confetti({
+        particleCount: 7,
+        spread: 55,
+        origin: { x: 0.5, y: 0.7}
+    });
 
-        if (Date.now() < end) {
-            requestAnimationFrame(frame);
-        }
-        }());
+    if (Date.now() < end) {
+        requestAnimationFrame(frame);
+    }
+    }());
 } 
