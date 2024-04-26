@@ -16,6 +16,18 @@
     text-align: center;
 }
 
+.skills-description button {
+    width: 0px;
+    margin-top: 15px;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    background-color: rgb(95, 209, 60);
+    color: white;
+    text-shadow: 0 0 3px black;
+    transition: 1s ease-in;
+}
+
 .skills-description h1 {
     font-size: 2rem;
     font-family: 'Montserrat', sans-serif;
@@ -39,7 +51,6 @@
     font-size: 0;
     border: dashed 3px white;
     background-color: transparent;
-    
 }
 
 .item.scaleAnimate {
@@ -96,7 +107,6 @@
 
     #skills {
         flex-direction: column;
-        justify-content: end;
     }
     
     .skills__container {
@@ -111,6 +121,10 @@
     
     .skills-description p {
         padding-bottom: 1rem;
+    }
+
+    .skills-description button {
+        margin-top: 0;
     }
     
 }

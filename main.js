@@ -1,6 +1,7 @@
 const toggle = document.getElementById('toggle') ;
 const nav = document.querySelector('.nav');
 const cards = document.querySelectorAll('.skills__container button');
+const buttonRestart = document.getElementById('restart');
 
 const selected = new Audio('./skills/sounds/duck-toy.mp3');
 const fail = new Audio('./skills/sounds/roblox.mp3');
@@ -27,16 +28,35 @@ let resultTwo = null;
 let SUCCESSES = 0;
 let numbers = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12];
 
-numbers = numbers.sort(()=> {
-    return Math.random() - 0.5
-})
-
 cards.forEach( card => {
      card.addEventListener('click', () => {
         const id =  card.id
         showCard(id);
     })
 });
+
+function shuffleCards () {
+    numbers = numbers.sort(()=> {
+        return Math.random() - 0.5
+    })
+}
+
+function restart (cards) {
+    count = 0;
+    cardOne = null
+    cardTwo = null
+    resultOne = null;
+    resultTwo = null;
+    SUCCESSES = 0;
+    shuffleCards()
+    cards.forEach((card)=> {
+        card.innerHTML = '';
+        card.disabled = false;
+        card.style.border = 'dashed 3px white';
+        card.style.boxShadow = 'none';
+        card.classList.remove('correctAnimation')
+    })
+}
 
 function scaleAnimation (cardOne) {
     cardOne.classList.add('scaleAnimate');
@@ -71,6 +91,10 @@ function winner () {
     document.body.clientWidth < MOBILE_SCREEN_WIDTH
     ? animationWinnerMovil(end)
     : animationWinner(end)
+    setTimeout(()=> {
+        buttonRestart.style.width = '150px';
+        buttonRestart.style.opacity = '1';
+    },ANIMATION_DURATION)
 }
 
 function successes () {
@@ -127,20 +151,6 @@ function cleanCards () {
     },1000)
 }
 
-function showCard (id) {
-    count++;
-    if ( count == 1) {
-        showCardOne(id)
-    } 
-    if (count == 2) {
-        showCardTwo(id)
-        resultOne == resultTwo
-        ? successes()
-        : cleanCards()
-    }
-}
-
-
 function animationWinner(end) {
     (function frame() {
     confetti({
@@ -175,3 +185,20 @@ function animationWinnerMovil (end) {
     }
     }());
 } 
+
+function showCard (id) {
+    count++;
+    if ( count == 1) {
+        showCardOne(id)
+    } 
+    if (count == 2) {
+        showCardTwo(id)
+        resultOne == resultTwo
+        ? successes()
+        : cleanCards()
+    }
+}
+
+shuffleCards()
+buttonRestart.addEventListener('click', () => {restart(cards)})
+
