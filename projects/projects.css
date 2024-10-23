@@ -156,13 +156,12 @@
     }
 
     .container__projects .element-project:hover .front {
-        margin-top: -64%;
+        margin-top: -68%;
     }
 
     
     .container__projects .project02 {
         border:none;
-        /* align-items: center; */
     }
     
     .container__projects .project03{
