@@ -111,11 +111,12 @@
 }
 
 .project03 {
-    background-image: url(img/button.png) ;
+    /* background-image: url(img/button.png) ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
+    position: relative; */
+    border: dotted white 2px;
 }
 .project03 a {
  width: 100%;
