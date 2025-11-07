@@ -133,12 +133,14 @@
 }
 
 .container__projects .project04 .front {
-    background: url(img/cronometro.webp) no-repeat center center/cover;
-
+    background: url(img/bienes-raices.webp) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
 }
 
 .container__projects .project04 {
-    background: #e0e0e0;
+    background: #dad6d6;
 }
 
 .container__projects .project04 .back h1 {
